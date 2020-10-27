@@ -8,4 +8,8 @@ class ApplicationController < Sinatra::Base
   get '/' do
     redirect '/recipes'
   end
+
+  get '/recipes' do
+    @recipes = Recipes.all
+  end
 end
